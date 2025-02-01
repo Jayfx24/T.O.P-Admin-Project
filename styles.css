@@ -13,6 +13,7 @@ body{
     grid-template-rows: 1fr 6fr;
     height: 100vh;
     font-family: "Roboto",serif;
+    padding: 0 30px;
 
 }
 
@@ -21,7 +22,8 @@ header{
     grid-column: span 2;
     display: grid;
     grid-template-columns: 1fr;
-    padding: 0 2rem;
+    /* padding: 0 1rem; */
+    /* background-color: ; */
 
 }
 
@@ -29,14 +31,18 @@ header svg {
     fill: black;
 }
 
-
+header svg:hover{
+    fill:white;
+}
 .top-header {
    display: grid;
    grid-template-columns: 2fr 1fr;
    /* border: 1px solid red; */
-   padding: 20px;
+   padding: 20px 0;
    justify-content: space-between;
    gap: 20px;
+   padding-right: 20px;
+
 }
 
 .top-header form{
@@ -66,6 +72,14 @@ header svg {
     
 }
 
+.top-side a{
+    font-size: 1.22rem;
+
+}
+
+.top-side a:hover{
+    color: white;
+}
 ul {
     list-style: none;
 }
@@ -75,7 +89,8 @@ ul {
     display: grid;
     grid-template-columns: 2fr 1fr;
     justify-content: space-between;
-    padding: 20px;
+    padding: 20px 0;
+    /* padding-right: 20px; */
 }
 
 .left-header{
@@ -150,21 +165,28 @@ a {
 }
 
 svg{
-    /* border: 1px solid black; */
+  
     width: 2rem;
-    fill: white;
-    
+    fill: white;   
    
 }
+
+.sidebar a:hover, .sidebar a:hover svg{
+    color:#1F2937;
+    fill: #1F2937;
+}
+
+
 .projects{
     grid-column: 2 / 4;
     /* border: 1px solid black; */
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 20px 5fr;
-    gap: 1em;
-    padding: 1em;
+    gap: 1em 2em;
+    padding: 1em 1em 1em 2em;
     background-color: #f5f5f5;
+    width:clamp(600px, 100%)
 
 }
 
@@ -179,25 +201,42 @@ svg{
 .project-list{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2em 1em
+    gap: 2em 1em;
+    
 
 }
 
 .project{
     /* background-color: brown; */
-    padding: 1em 0.5em;
+    padding: 1em;
     border-left: 10px solid #1F2937;
     border-radius: 8px;
-    /* width: 300px; */
+    text-align: left;
     background-color: white;
+    /* width: clamp(33%, 100%, 400px); */
+
+}
+
+.project:hover{
+    border-left: 15px solid #1F2937;
+    
+}
+.article-heading{
+    margin: 10px 0;
+    font-weight: 700;
+    font-size: 1.2em;
+
+}
+.article-body{
+    letter-spacing: 0.3px;
 }
 .announcement{
     /* border: 1px solid black; */
+    /* padding: 0 10px; */
     display: grid;
-    /* grid-template-columns: 300px; */
     grid-template-rows: 1fr 1fr;
     gap: 5em;
-    /* overflow: scroll; */
+    min-width: 300px;
     
 
 }
@@ -205,7 +244,7 @@ svg{
     border: 1px solid white;
     background-color: white;
     padding: 20px;
-    width: clamp(50%, 300px, 300px);
+    width: clamp(50%, 300px, 100%);
     border-radius: 7px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 
@@ -233,4 +272,59 @@ svg{
 
 }
 
+.trending-item{
+    display: flex;
+    /* border: 1px solid; */
+    gap: 20px;
+    align-content: flex-end;
+    margin-bottom: 1em;
+}
+
+.trending-item img{
+    width: 50px;
+}
+.trendy {
+    padding-top: 5px;
+    font-size: 100%
+}
+.trending-user{
+    
+}
+
+.trending-heading{
+    color: lightslategrey;
+    /* font-size: .9em; */
+    text-align: right;
+    padding-top: 5px;
+    margin-left: 10px;
+}
 /* projects */
+.projects{
+    /* background-color: #22C55E; */
+    border-radius: 15px;
+    /* margin-right: 10px; */
+    margin-bottom: 40px;
+
+
+}
+
+.project{
+    border-color: orange;
+}
+body{
+    background-color: #22C55E;
+}
+header{
+    background-color: #22C55E;
+    color:white;
+    
+}
+.sidebar{
+    background-color: #22C55E
+    ;
+
+}
+/* .header-btn:hover{
+    background-color: orange;
+    border: 1px solid orange;
+} */
