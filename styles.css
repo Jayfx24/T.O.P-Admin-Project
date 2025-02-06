@@ -212,7 +212,7 @@ svg{
     gap: 1em 2em;
     padding: 1em 1em 1em 2em;
     background-color: #f5f5f5;
-    width:clamp(600px, 100%)
+    min-width: 800px;
 
 }
 
@@ -240,6 +240,11 @@ svg{
     text-align: left;
     background-color: white;
     /* width: clamp(33%, 100%, 400px); */
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
 
 }
 
@@ -256,9 +261,28 @@ svg{
 .article-body{
     letter-spacing: 0.3px;
 }
+
+.project-icons{   
+    align-self: flex-end;
+}
+.project-icons ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: baseline;
+    gap: 1rem;
+    margin-top: 10px;
+
+}
+
+.project-icons svg {
+    width: 30px;
+    fill: black;
+}
+.project-icons svg:hover{
+    fill: orange;
+}
 .announcement{
-    /* border: 1px solid black; */
-    /* padding: 0 10px; */
+
     display: grid;
     grid-template-rows: 1fr 1fr;
     gap: 5em;
@@ -354,7 +378,6 @@ body{
 header{
     background-color: #22C55E;
     color:white;
-    /* font-family:  "", serif; */
     
 
     
@@ -364,7 +387,3 @@ header{
     ;
 
 }
-/* .header-btn:hover{
-    background-color: orange;
-    border: 1px solid orange;
-} */
